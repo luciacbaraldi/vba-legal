@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalevi, Baraldi & Asociados | Global Immigration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #002147;
+            --gold: #C5A059;
+            --white: #FFFFFF;
+            --charcoal: #1a1a1a;
+            --soft-gray: #f2f2f2;
+        }
+
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--charcoal); overflow-x: hidden; }
+
+        /* Navigation - Sleek & Transparent */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 30px 6%; position: absolute; width: 88%; z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .logo { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.2rem; letter-spacing: 3px; }
+        .nav-links a { color: var(--white); text-decoration: none; margin-left: 40px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; }
+
+        /* Hero - Not just a photo, but a 'Statement' */
+        .hero {
+            height: 100vh; background: var(--navy); display: flex; align-items: center; position: relative;
+            color: var(--white); padding: 0 10%;
+        }
+        .hero-image {
+            position: absolute; right: 0; top: 0; width: 45%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=2069') center/cover;
+            filter: grayscale(100%) brightness(60%);
+        }
+        .hero-content { position: relative; z-index: 10; max-width: 600px; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1.1; margin-bottom: 30px; }
+        .hero-content h1 span { font-style: italic; font-weight: 400; color: var(--gold); }
+        .gold-line { width: 60px; height: 2px; background: var(--gold); margin-bottom: 30px; }
+
+        /* Narrative Section - The 'Anti-Generic' Part */
+        .about { padding: 120px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; background: var(--soft-gray); }
+        .about h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy); }
+        .about p { font-size: 1.1rem; color: #555; line-height: 1.8; font-weight: 300; }
+
+        /* Services - Minimalist Grid */
+        .services { padding: 100px 10%; }
+        .service-row { 
+            display: flex; justify-content: space-between; padding: 40px 0;
+            border-bottom: 1px solid #ddd; transition: 0.4s; cursor: pointer;
+        }
+        .service-row:hover { padding-left: 20px; border-bottom-color: var(--gold); }
+        .service-num { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.2rem; margin-right: 40px; }
+        .service-name { font-family: 'Playfair Display', serif; font-size: 1.8rem; flex-grow: 1; color: var(--navy); }
+        .service-desc { max-width: 400px; font-size: 0.9rem; color: #777; }
+
+        /* Footer */
+        footer { padding: 80px 10%; background: var(--navy); color: var(--white); display: flex; justify-content: space-between; align-items: flex-end; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">VITALEVI & BARALDI</div>
+        <div class="nav-links">
+            <a href="#">The Firm</a>
+            <a href="#">Expertise</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <div class="gold-line"></div>
+            <h1>Global Mobility <span>Redefined.</span></h1>
+            <p>Providing the legal architecture for the world’s most ambitious transitions. We specialize in the high-stakes intersection of law, borders, and opportunity.</p>
+            <br><br>
+            <a href="#" style="color: var(--gold); text-decoration: none; letter-spacing: 2px; font-size: 0.8rem; border-bottom: 1px solid var(--gold); padding-bottom: 5px;">INQUIRE PRIVATELY</a>
+        </div>
+        <div class="hero-image"></div>
+    </div>
+
+    <section class="about">
+        <div>
+            <h2>Beyond Documentation. <br>Strategic Advocacy.</h2>
+        </div>
+        <div>
+            <p>Vitalevi, Baraldi & Asociados was founded on a singular premise: that immigration is not a matter of paperwork, but a matter of human and corporate destiny. We represent a select roster of clients who require more than just a visa—they require a partner who understands the geopolitical nuances of global movement.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="service-row">
+            <div class="service-num">01</div>
+            <div class="service-name">Global Talent Acquisition</div>
+            <div class="service-desc">Strategic immigration structures for tech firms and multinational corporations relocating top-tier intellectual capital.</div>
+        </div>
+        <div class="service-row">
+            <div class="service-num">02</div>
+            <div class="service-num">02</div>
+            <div class="service-name">High-Net-Worth Residency</div>
+            <div class="service-desc">Bespoke investment immigration pathways for individuals seeking to diversify their residency and citizenship portfolios.</div>
+        </div>
+        <div class="service-row">
+            <div class="service-num">03</div>
+            <div class="service-name">Extraordinary Ability (O-1/EB-1)</div>
+            <div class="service-desc">Advocacy for artists, scientists, and industry leaders recognized at the highest levels of their respective fields.</div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <div class="footer-logo">VBA</div>
+            <p style="opacity: 0.5; font-size: 0.8rem;">ESTABLISHED 2012</p>
+        </div>
+        <div style="text-align: right;">
+            <p>New York — Madrid — Buenos Aires</p>
+            <p style="opacity: 0.5; font-size: 0.7rem;">© 2025 Vitalevi, Baraldi & Asociados. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
