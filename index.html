@@ -5,32 +5,32 @@
     <meta http-equiv="Content-Language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vitalevi & Baraldi | Argentine Immigration & Citizenship Law Firm</title>
+    <title>Vitalevi & Baraldi | Argentine Immigration & Citizenship Law</title>
 
     <!-- SEO -->
-    <meta name="description" content="Argentine immigration and citizenship law firm advising US and European nationals on residency, nationality and long-term settlement in Argentina.">
+    <meta name="description" content="Boutique Argentine immigration and citizenship law firm advising international clients on residency and nationality matters.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.vitalevibarladi.com/">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Vitalevi & Baraldi | Argentine Immigration Law">
-    <meta property="og:description" content="Legal advice for US and European clients seeking residency or citizenship in Argentina.">
+    <meta property="og:description" content="Immigration and citizenship law for international clients relocating to Argentina.">
     <meta property="og:url" content="https://www.vitalevibarladi.com/">
     <meta property="og:site_name" content="Vitalevi & Baraldi">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
     <style>
         :root {
-            --ink: #0f172a;
-            --ink-soft: #334155;
-            --gold: #bfa76a;
+            --ink: #0b1220;
+            --ink-soft: #3a4250;
+            --accent: #c2a76d;
             --paper: #ffffff;
-            --stone: #f5f7fa;
+            --stone: #f4f6f8;
+            --divider: #e4e7ec;
         }
 
         * {
@@ -49,19 +49,19 @@
             font-family: 'Libre Baskerville', serif;
             color: var(--ink);
             font-weight: 400;
-            line-height: 1.25;
+            line-height: 1.3;
         }
 
         h1 {
-            font-size: 3.4rem;
+            font-size: 3.2rem;
         }
 
         h2 {
-            font-size: 2.4rem;
+            font-size: 2.3rem;
         }
 
         h3 {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
         }
 
         p {
@@ -73,19 +73,20 @@
             color: inherit;
         }
 
+        /* Navigation */
         nav {
             position: fixed;
-            top: 0;
             width: 100%;
-            background: rgba(255,255,255,0.97);
-            border-bottom: 1px solid #e5e7eb;
+            top: 0;
+            background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid var(--divider);
             z-index: 1000;
         }
 
         .nav-inner {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 30px;
+            padding: 22px 32px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -94,25 +95,26 @@
         .nav-logo {
             font-family: 'Libre Baskerville', serif;
             font-size: 1.1rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.04em;
         }
 
         .nav-links a {
-            margin-left: 32px;
-            font-size: 0.85rem;
-            letter-spacing: 0.08em;
+            margin-left: 36px;
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
             color: var(--ink-soft);
         }
 
         main {
-            margin-top: 90px;
+            margin-top: 100px;
         }
 
+        /* Hero */
         .hero {
-            background: linear-gradient(to right, #0f172a 60%, #111827);
+            background: linear-gradient(180deg, #0b1220 0%, #10192e 100%);
             color: white;
-            padding: 140px 30px;
+            padding: 160px 32px 140px;
         }
 
         .hero-inner {
@@ -120,33 +122,34 @@
             margin: 0 auto;
         }
 
-        .hero p {
-            max-width: 600px;
-            color: #e5e7eb;
+        .hero-label {
+            color: var(--accent);
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
         }
 
-        .hero .label {
-            color: var(--gold);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            margin-bottom: 20px;
+        .hero p {
+            max-width: 620px;
+            color: #d5d8de;
         }
 
         .cta {
             display: inline-block;
-            margin-top: 40px;
-            padding: 14px 38px;
-            background: var(--gold);
-            color: #0f172a;
+            margin-top: 44px;
+            padding: 15px 42px;
+            background: var(--accent);
+            color: #0b1220;
             font-size: 0.8rem;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
             font-weight: 500;
         }
 
+        /* Sections */
         section {
-            padding: 120px 30px;
+            padding: 120px 32px;
         }
 
         .container {
@@ -157,9 +160,10 @@
         .two-col {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            gap: 90px;
         }
 
+        /* Services */
         .services {
             background: var(--stone);
         }
@@ -167,31 +171,28 @@
         .service-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 60px;
+            gap: 44px;
+            margin-top: 70px;
         }
 
         .service-box {
             background: white;
-            padding: 50px;
-            border: 1px solid #e5e7eb;
+            padding: 56px;
+            border: 1px solid var(--divider);
         }
 
         .service-box p {
             font-size: 0.95rem;
         }
 
-        .disclaimer {
+        .scope-note {
             margin-top: 80px;
+            max-width: 900px;
             font-size: 0.75rem;
             color: #6b7280;
-            max-width: 900px;
         }
 
-        .experience {
-            background: white;
-        }
-
+        /* Experience */
         .experience ul {
             list-style: none;
             padding: 0;
@@ -207,11 +208,12 @@
             content: "—";
             position: absolute;
             left: 0;
-            color: var(--gold);
+            color: var(--accent);
         }
 
+        /* Contact */
         .contact {
-            background: #0f172a;
+            background: #0b1220;
             color: white;
         }
 
@@ -219,31 +221,35 @@
             color: white;
         }
 
-        form input, form textarea, form select {
+        form input,
+        form textarea,
+        form select {
             width: 100%;
             background: transparent;
             border: none;
             border-bottom: 1px solid #9ca3af;
             padding: 14px 0;
-            margin-bottom: 26px;
+            margin-bottom: 28px;
             color: white;
             font-family: 'Inter', sans-serif;
         }
 
         form button {
-            background: var(--gold);
+            background: var(--accent);
             border: none;
-            padding: 14px 36px;
+            padding: 15px 40px;
             font-size: 0.8rem;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
             cursor: pointer;
         }
 
+        /* Footer */
         footer {
             background: #020617;
             color: #9ca3af;
             text-align: center;
-            padding: 70px 30px;
+            padding: 80px 32px;
             font-size: 0.7rem;
         }
 
@@ -254,6 +260,10 @@
 
             h1 {
                 font-size: 2.4rem;
+            }
+
+            .hero {
+                padding: 120px 32px;
             }
         }
     </style>
@@ -289,11 +299,11 @@
 
 <section class="hero">
     <div class="hero-inner">
-        <div class="label">Argentine Immigration Law Firm</div>
-        <h1>Immigration and citizenship law for international clients</h1>
+        <div class="hero-label">Argentine Immigration Law Firm</div>
+        <h1>Immigration and citizenship law for internationally mobile clients</h1>
         <p>
-            Vitalevi & Baraldi advises foreign nationals, families and companies from the United States and Europe
-            on Argentine residency, nationality and long-term settlement under federal law.
+            Vitalevi & Baraldi is a boutique Argentine law firm advising foreign nationals,
+            families and professionals on residency and nationality matters under federal law.
         </p>
         <a href="#contact" class="cta">Request a legal consultation</a>
     </div>
@@ -306,9 +316,9 @@
         </div>
         <div>
             <p>
-                Vitalevi & Baraldi is an Argentine law firm dedicated to immigration and nationality matters.
-                The practice focuses on advising international clients who require clear legal frameworks,
-                procedural predictability and structured communication.
+                The firm advises international clients who require clear legal frameworks,
+                documented procedures and predictable interaction with Argentine authorities.
+                Matters are handled with a focus on legal certainty, discretion and continuity.
             </p>
         </div>
     </div>
@@ -322,29 +332,32 @@
             <div class="service-box">
                 <h3>Immigration & Residency</h3>
                 <p>
-                    Legal advice and representation for temporary and permanent residence applications,
-                    renewals and changes of status.
+                    Legal advice and representation for temporary and permanent residence
+                    applications, renewals and changes of status.
                 </p>
             </div>
 
             <div class="service-box">
                 <h3>Citizenship Proceedings</h3>
                 <p>
-                    Judicial filings and procedural strategy for Argentine citizenship based on residence.
+                    Judicial filings and procedural strategy for Argentine citizenship
+                    based on lawful residence.
                 </p>
             </div>
 
             <div class="service-box">
-                <h3>Corporate & Professional Mobility</h3>
+                <h3>Professional & Corporate Mobility</h3>
                 <p>
-                    Advisory services for companies and professionals relocating to Argentina.
+                    Advisory services for companies and professionals relocating to Argentina
+                    within regulated legal frameworks.
                 </p>
             </div>
         </div>
 
-        <div class="disclaimer">
+        <div class="scope-note">
             Legal services are provided exclusively by attorneys licensed in the Argentine Republic.
-            Relocation and administrative support is advisory and does not constitute legal representation.
+            Relocation and administrative assistance is advisory in nature and does not constitute
+            legal representation.
         </div>
     </div>
 </section>
@@ -358,8 +371,8 @@
             <ul>
                 <li>English-language legal communication</li>
                 <li>Defined procedural stages and timelines</li>
-                <li>Documented legal guidance at each step</li>
-                <li>Predictable interaction with authorities</li>
+                <li>Written legal guidance throughout the process</li>
+                <li>Structured interaction with authorities</li>
             </ul>
         </div>
     </div>
@@ -370,7 +383,8 @@
         <div>
             <h2>Request a Consultation</h2>
             <p>
-                Submit an inquiry for an initial legal assessment of your immigration or citizenship matter.
+                Submit an inquiry for an initial legal assessment of your immigration
+                or citizenship matter.
             </p>
         </div>
         <div>
