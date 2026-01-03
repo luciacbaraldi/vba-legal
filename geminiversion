@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vitalevi & Baraldi | Argentine Immigration & Citizenship Law</title>
+
+    <!-- Primary SEO Meta -->
+    <meta name="description" content="Argentine immigration and citizenship law firm advising US and European clients on residency, nationality and long-term relocation to Argentina.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.vitalevibarladi.com/">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vitalevi & Baraldi | Argentine Immigration & Citizenship Law">
+    <meta property="og:description" content="Legal advice for US and European nationals seeking residency or citizenship in Argentina.">
+    <meta property="og:url" content="https://www.vitalevibarladi.com/">
+    <meta property="og:site_name" content="Vitalevi & Baraldi">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Argentine Immigration & Citizenship Law">
+    <meta name="twitter:description" content="Immigration and nationality legal services for international clients relocating to Argentina.">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        :root {
+            --navy: #002147;
+            --gold: #C5A059;
+            --white: #FFFFFF;
+            --charcoal: #1a1a1a;
+            --soft-gray: #f9f9f9;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: 'Libre Baskerville', serif;
+            background: var(--white);
+            color: var(--charcoal);
+            line-height: 1.8;
+        }
+
+        .label-font {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 6%;
+            position: fixed;
+            width: 88%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--navy);
+            margin-left: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+        }
+
+        .hero {
+            height: 90vh;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 10;
+            max-width: 700px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80') center/cover;
+            filter: grayscale(100%) opacity(0.3);
+        }
+
+        section {
+            padding: 120px 10%;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            color: var(--navy);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .process-visual {
+            background: var(--soft-gray);
+            border-left: 5px solid var(--gold);
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .expertise {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .expertise h2 {
+            color: var(--white);
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .card {
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .card h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .experience-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience-list li {
+            margin-bottom: 25px;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .experience-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            font-family: 'Libre Baskerville', serif;
+            outline: none;
+        }
+
+        .btn {
+            background: var(--gold);
+            color: var(--white);
+            padding: 15px 40px;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            padding: 60px 10%;
+            background: #00152e;
+            color: var(--white);
+            text-align: center;
+        }
+
+        @media (max-width: 968px) {
+            .grid-2, .service-grid, .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Vitalevi & Baraldi",
+      "url": "https://www.vitalevibarladi.com",
+      "serviceType": ["Immigration Law", "Citizenship Law"],
+      "areaServed": ["Argentina", "United States", "European Union"],
+      "availableLanguage": ["English", "Spanish"]
+    }
+    </script>
+</head>
+
+<body>
+
+<nav role="navigation">
+    <div class="logo">Vitalevi & Baraldi</div>
+    <div class="nav-links">
+        <a href="#about">The Firm</a>
+        <a href="#expertise">Services</a>
+        <a href="#contact">Inquire</a>
+    </div>
+</nav>
+
+<main role="main">
+
+<div class="hero">
+    <div class="hero-content">
+        <p class="label-font" style="color: var(--gold);">Global Mobility & Relocation</p>
+        <h1>Argentine immigration law <span>for international clients</span></h1>
+        <p>Advising individuals, families and companies from the United States and Europe on residency, citizenship and long-term settlement in Argentina.</p>
+        <br>
+        <a href="#contact" class="btn">START YOUR PROCESS</a>
+    </div>
+    <div class="hero-image"></div>
+</div>
+
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80"
+     alt="Buenos Aires skyline representing Argentina immigration and residency services"
+     loading="lazy"
+     style="display:none;">
+
+<section id="about">
+    <div class="grid-2">
+        <div>
+            <p class="label-font" style="color: var(--gold);">Who we are</p>
+            <h2>Structured immigration and relocation services for international clients.</h2>
+        </div>
+        <div>
+            <p>Vitalevi & Baraldi provides legal advice to foreign nationals navigating Argentine immigration and nationality procedures.</p>
+            <div class="process-visual">
+                <strong>End-to-End Legal Oversight:</strong> Clear documentation paths, filing stages and timeline visibility throughout the process.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="expertise" class="expertise">
+    <h2>Primary Legal Services</h2>
+    <div class="service-grid">
+        <div class="card"><h3>Immigration & Residency</h3><p>Residence applications, renewals and compliance.</p></div>
+        <div class="card"><h3>Citizenship Proceedings</h3><p>Judicial filings and procedural strategy.</p></div>
+        <div class="card"><h3>Corporate Mobility</h3><p>Legal advisory for relocating professionals.</p></div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-container">
+        <div>
+            <h2>Begin your Consultation.</h2>
+        </div>
+        <div>
+            <form action="mailto:intake@vitalevibarladi.com" method="post" enctype="text/plain">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Professional Email" required>
+                <input type="text" placeholder="Nationality" required>
+                <input type="text" placeholder="Current Country of Residence" required>
+                <select required>
+                    <option value="" disabled selected>Primary Objective</option>
+                    <option>Residency</option>
+                    <option>Citizenship</option>
+                    <option>Evaluation</option>
+                </select>
+                <textarea rows="4" placeholder="Brief description"></textarea>
+                <button type="submit" class="btn">SUBMIT REQUEST</button>
+                <p style="font-size:0.6rem; opacity:0.6;">Submission does not create an attorney-client relationship.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="logo" style="color:white;">Vitalevi & Baraldi</div>
+    <p style="font-size:0.65rem; opacity:0.5;">
+        This website contains general information only and does not constitute legal advice.
+        No attorney-client relationship is formed.
+    </p>
+
+    <p itemscope itemtype="https://schema.org/LegalService" style="display:none;">
+        <span itemprop="name">Vitalevi & Baraldi</span>
+        <span itemprop="serviceType">Immigration Law</span>
+        <span itemprop="areaServed">Argentina</span>
+    </p>
+</footer>
+
+</body>
+</html>
