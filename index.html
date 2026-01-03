@@ -140,43 +140,38 @@
         }
 
         /* Services */
-        .services {
-            padding: 110px 10%;
-        }
+        .service-row.split {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    padding: 48px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
 
-        .service-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 36px 0;
-            border-bottom: 1px solid #ddd;
-            transition: 0.4s;
-        }
+.service-question {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--navy);
+    line-height: 1.4;
+}
 
-        .service-row:hover {
-            padding-left: 18px;
-            border-bottom-color: var(--gold);
-        }
+.service-answer {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.8;
+}
 
-        .service-num {
-            font-family: 'Playfair Display', serif;
-            color: var(--gold);
-            font-size: 1.1rem;
-            margin-right: 36px;
-        }
+@media (max-width: 900px) {
+    .service-row.split {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
 
-        .service-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            flex-grow: 1;
-            color: var(--navy);
-        }
+    .service-question {
+        font-size: 1.25rem;
+    }
+}
 
-        .service-desc {
-            max-width: 420px;
-            font-size: 0.9rem;
-            color: #777;
-            line-height: 1.7;
-        }
 
         /* Footer */
         footer {
@@ -313,44 +308,49 @@
 </section>
 <section class="services" id="services">
 
-    <div class="service-row">
-        <div class="service-num">01</div>
-        <div class="service-name">Immigration and Residency</div>
-        <div class="service-desc">
-            Do you need to apply for, renew or change a residence permit in Argentina?
-            We provide legal advice and representation for temporary and permanent residency.
+    <div class="service-row split">
+        <div class="service-question">
+            Do you need a residence permit in Argentina?
+        </div>
+        <div class="service-answer">
+            Legal advice and representation for temporary and permanent residency,
+            including new applications, renewals and changes of immigration status.
         </div>
     </div>
 
-    <div class="service-row">
-        <div class="service-num">02</div>
-        <div class="service-name">Citizenship Proceedings</div>
-        <div class="service-desc">
-            Are you eligible for Argentine citizenship through residence?
-            We handle court filings, documentation and procedural strategy.
+    <div class="service-row split">
+        <div class="service-question">
+            Are you eligible for Argentine citizenship?
+        </div>
+        <div class="service-answer">
+            Legal representation for citizenship through residence, including court
+            filings, documentation and procedural guidance.
         </div>
     </div>
 
-    <div class="service-row">
-        <div class="service-num">03</div>
-        <div class="service-name">Professional & Corporate Mobility</div>
-        <div class="service-desc">
+    <div class="service-row split">
+        <div class="service-question">
             Are you relocating to Argentina for work or business?
-            We assist companies and professionals with immigration and mobility matters.
+        </div>
+        <div class="service-answer">
+            Immigration and mobility assistance for professionals, executives
+            and companies operating under Argentine regulations.
         </div>
     </div>
 
-    <div class="service-row">
-        <div class="service-num">04</div>
-        <div class="service-name">Regulatory & Administrative Advisory</div>
-        <div class="service-desc">
-            Do you need help with local administrative requirements?
-            We assist with tax registration (Monotributo), company formation, bank account opening,
-            driver’s licences and personal identification numbers (CUIL / CDI).
+    <div class="service-row split">
+        <div class="service-question">
+            Do you need help with local administrative matters?
+        </div>
+        <div class="service-answer">
+            Assistance with tax registration (Monotributo), company formation,
+            bank account opening, driver’s licences and personal identification
+            numbers (CUIL / CDI).
         </div>
     </div>
 
 </section>
+
 
 
 <section id="contact" class="about" style="align-items:start;">
