@@ -187,6 +187,84 @@
             justify-content: space-between;
             align-items: flex-end;
         }
+        .intake-form {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.form-row.single {
+    grid-template-columns: 1fr;
+}
+
+.intake-form input,
+.intake-form textarea,
+.intake-form select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 6px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    letter-spacing: 0.02em;
+    appearance: none;
+    border-radius: 0;
+}
+
+.intake-form textarea {
+    resize: none;
+}
+
+.intake-form input::placeholder,
+.intake-form textarea::placeholder {
+    color: #9a9a9a;
+}
+
+.intake-form select {
+    color: #6f6f6f;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, transparent 50%, #999 50%),
+                      linear-gradient(135deg, #999 50%, transparent 50%);
+    background-position: calc(100% - 10px) 50%, calc(100% - 4px) 50%;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.intake-form input:focus,
+.intake-form textarea:focus,
+.intake-form select:focus {
+    outline: none;
+    border-bottom-color: var(--gold);
+}
+
+.intake-submit {
+    margin-top: 10px;
+    align-self: flex-start;
+    background: var(--gold);
+    border: none;
+    padding: 14px 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.intake-note {
+    margin-top: 10px;
+    font-size: 0.6rem;
+    opacity: 0.6;
+    max-width: 520px;
+    line-height: 1.6;
+}
+
 
         .footer-logo {
             font-family: 'Playfair Display', serif;
@@ -283,64 +361,61 @@
 
     <div>
         <form action="mailto:intake@vitalevibarladi.com" method="post" enctype="text/plain"
-              style="display:grid; grid-template-columns:1fr 1fr; gap:28px 32px;">
+      class="intake-form">
 
-            <!-- Row 1 -->
-            <input type="text" name="full_name" placeholder="Full name" required>
-            <input type="email" name="email" placeholder="Email address" required>
+    <div class="form-row">
+        <input type="text" name="full_name" placeholder="Full name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+    </div>
 
-            <!-- Row 2 -->
-            <input type="text" name="nationality" placeholder="Nationality / Nationalities" required>
-            <input type="text" name="current_country" placeholder="Current country of residence" required>
+    <div class="form-row">
+        <input type="text" name="nationality" placeholder="Nationality / Nationalities" required>
+        <input type="text" name="current_country" placeholder="Current country of residence" required>
+    </div>
 
-            <!-- Row 3 -->
-            <select name="in_argentina" required>
-                <option value="" disabled selected>Currently in Argentina?</option>
-                <option>Yes</option>
-                <option>No</option>
-            </select>
+    <div class="form-row">
+        <select name="in_argentina" required>
+            <option value="" disabled selected>Currently in Argentina?</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
 
-            <select name="timeframe" required>
-                <option value="" disabled selected>Intended timeframe</option>
-                <option>Immediate (within 3 months)</option>
-                <option>Medium term (3–12 months)</option>
-                <option>Long term / exploratory</option>
-            </select>
+        <select name="timeframe" required>
+            <option value="" disabled selected>Intended timeframe</option>
+            <option>Immediate (within 3 months)</option>
+            <option>Medium term (3–12 months)</option>
+            <option>Long term / exploratory</option>
+        </select>
+    </div>
 
-            <!-- Row 4 -->
-            <select name="objective" required style="grid-column:1 / -1;">
-                <option value="" disabled selected>Primary objective</option>
-                <option>Immigration or residency application</option>
-                <option>Argentine citizenship proceedings</option>
-                <option>Tax registration (Monotributo)</option>
-                <option>Company formation</option>
-                <option>Bank account opening</option>
-                <option>Driver’s licence (car or motorcycle)</option>
-                <option>General regulatory or administrative advisory</option>
-            </select>
+    <div class="form-row single">
+        <select name="objective" required>
+            <option value="" disabled selected>Primary objective</option>
+            <option>Immigration or residency application</option>
+            <option>Argentine citizenship proceedings</option>
+            <option>Tax registration (Monotributo)</option>
+            <option>Company formation</option>
+            <option>Bank account opening</option>
+            <option>Driver’s licence (car or motorcycle)</option>
+            <option>General regulatory or administrative advisory</option>
+        </select>
+    </div>
 
-            <!-- Row 5 -->
-            <textarea name="description" rows="4"
-                placeholder="Brief description of your situation"
-                style="grid-column:1 / -1;"></textarea>
+    <div class="form-row single">
+        <textarea name="description" rows="3"
+                  placeholder="Brief description of your situation"></textarea>
+    </div>
 
-            <!-- Submit -->
-            <div style="grid-column:1 / -1; margin-top:10px;">
-                <button type="submit"
-                    style="background:var(--gold); border:none; padding:14px 38px;
-                           font-family:'Montserrat', sans-serif; font-size:0.75rem;
-                           letter-spacing:2px; text-transform:uppercase; cursor:pointer;">
-                    Submit request
-                </button>
+    <button type="submit" class="intake-submit">Submit request</button>
 
-                <p style="font-size:0.6rem; opacity:0.6; margin-top:16px; max-width:520px; line-height:1.6;">
-                    Inquiries are reviewed personally and subject to availability.
-                    Response times vary depending on complexity.
-                    Submission does not create an attorney-client relationship.
-                </p>
-            </div>
+    <p class="intake-note">
+        Inquiries are reviewed personally and subject to availability.
+        Response times vary depending on complexity.
+        Submission does not create an attorney-client relationship.
+    </p>
 
-        </form>
+</form>
+
     </div>
 </section>
 
