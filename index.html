@@ -8,17 +8,9 @@
     <title>Vitalevi & Baraldi | Argentine Immigration & Citizenship Law</title>
 
     <!-- SEO -->
-    <meta name="description" content="Boutique Argentine immigration and citizenship law firm advising international clients on residency and nationality matters.">
+    <meta name="description" content="Boutique Argentine immigration and citizenship law firm advising international clients on residency, nationality and regulatory matters.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.vitalevibarladi.com/">
-    <link rel="icon" href="/favicon.ico">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Vitalevi & Baraldi | Argentine Immigration Law">
-    <meta property="og:description" content="Immigration and citizenship law for international clients relocating to Argentina.">
-    <meta property="og:url" content="https://www.vitalevibarladi.com/">
-    <meta property="og:site_name" content="Vitalevi & Baraldi">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -29,7 +21,7 @@
             --ink-soft: #3a4250;
             --accent: #c2a76d;
             --paper: #ffffff;
-            --stone: #f4f6f8;
+            --stone: #f6f7f9;
             --divider: #e4e7ec;
         }
 
@@ -42,7 +34,7 @@
             font-family: 'Inter', sans-serif;
             background: var(--paper);
             color: var(--ink-soft);
-            line-height: 1.75;
+            line-height: 1.8;
         }
 
         h1, h2, h3 {
@@ -52,20 +44,13 @@
             line-height: 1.3;
         }
 
-        h1 {
-            font-size: 3.2rem;
-        }
-
-        h2 {
-            font-size: 2.3rem;
-        }
-
-        h3 {
-            font-size: 1.35rem;
-        }
+        h1 { font-size: 3.1rem; }
+        h2 { font-size: 2.2rem; }
+        h3 { font-size: 1.3rem; }
 
         p {
             font-size: 1rem;
+            max-width: 60ch;
         }
 
         a {
@@ -76,15 +61,15 @@
         /* Navigation */
         nav {
             position: fixed;
-            width: 100%;
             top: 0;
+            width: 100%;
             background: rgba(255,255,255,0.96);
             border-bottom: 1px solid var(--divider);
             z-index: 1000;
         }
 
         .nav-inner {
-            max-width: 1200px;
+            max-width: 1180px;
             margin: 0 auto;
             padding: 22px 32px;
             display: flex;
@@ -94,61 +79,62 @@
 
         .nav-logo {
             font-family: 'Libre Baskerville', serif;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             letter-spacing: 0.04em;
         }
 
         .nav-links a {
-            margin-left: 36px;
-            font-size: 0.8rem;
-            letter-spacing: 0.12em;
+            margin-left: 34px;
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
             color: var(--ink-soft);
         }
 
         main {
-            margin-top: 100px;
+            margin-top: 96px;
         }
 
         /* Hero */
         .hero {
-            background: linear-gradient(180deg, #0b1220 0%, #10192e 100%);
+            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
             color: white;
-            padding: 160px 32px 140px;
+            padding: 150px 32px 130px;
         }
 
         .hero-inner {
-            max-width: 1200px;
+            max-width: 1180px;
             margin: 0 auto;
         }
 
         .hero-label {
             color: var(--accent);
-            font-size: 0.7rem;
-            letter-spacing: 0.16em;
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
-            margin-bottom: 24px;
+            margin-bottom: 26px;
+        }
+
+        .hero h1 {
+            color: white;
+            max-width: 16ch;
         }
 
         .hero p {
-            max-width: 620px;
-            color: #d5d8de;
+            color: #d1d5db;
+            margin-top: 22px;
         }
-        
-.hero h1 {
-    color: #ffffff;
-}
 
         .cta {
             display: inline-block;
-            margin-top: 44px;
-            padding: 15px 42px;
-            background: var(--accent);
-            color: #0b1220;
-            font-size: 0.8rem;
-            letter-spacing: 0.14em;
+            margin-top: 46px;
+            padding: 14px 38px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.75rem;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
-            font-weight: 500;
+            background: transparent;
         }
 
         /* Sections */
@@ -157,17 +143,17 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1180px;
             margin: 0 auto;
         }
 
         .two-col {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 90px;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 100px;
         }
 
-        /* Services */
+        /* Primary Services */
         .services {
             background: var(--stone);
         }
@@ -175,31 +161,56 @@
         .service-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 44px;
+            gap: 48px;
             margin-top: 70px;
         }
 
         .service-box {
             background: white;
-            padding: 56px;
+            padding: 52px;
             border: 1px solid var(--divider);
         }
 
         .service-box p {
             font-size: 0.95rem;
+            margin-top: 14px;
+        }
+
+        /* Secondary Services */
+        .secondary-services {
+            margin-top: 90px;
+            max-width: 900px;
+        }
+
+        .secondary-services ul {
+            list-style: none;
+            padding: 0;
+            margin: 40px 0 0;
+        }
+
+        .secondary-services li {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--divider);
+            font-size: 0.95rem;
+        }
+
+        .secondary-services strong {
+            color: var(--ink);
+            font-weight: 500;
         }
 
         .scope-note {
-            margin-top: 80px;
-            max-width: 900px;
-            font-size: 0.75rem;
+            margin-top: 70px;
+            font-size: 0.7rem;
             color: #6b7280;
+            max-width: 900px;
         }
 
         /* Experience */
         .experience ul {
             list-style: none;
             padding: 0;
+            margin-top: 24px;
         }
 
         .experience li {
@@ -239,11 +250,12 @@
         }
 
         form button {
-            background: var(--accent);
-            border: none;
-            padding: 15px 40px;
-            font-size: 0.8rem;
-            letter-spacing: 0.14em;
+            background: transparent;
+            border: 1px solid var(--accent);
+            padding: 14px 36px;
+            color: var(--accent);
+            font-size: 0.75rem;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
             cursor: pointer;
         }
@@ -262,33 +274,18 @@
                 grid-template-columns: 1fr;
             }
 
-            h1 {
-                font-size: 2.4rem;
-            }
+            h1 { font-size: 2.3rem; }
 
             .hero {
                 padding: 120px 32px;
             }
         }
     </style>
-
-    <!-- Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LegalService",
-      "name": "Vitalevi & Baraldi",
-      "url": "https://www.vitalevibarladi.com",
-      "serviceType": ["Immigration Law", "Citizenship Law"],
-      "areaServed": ["Argentina", "United States", "European Union"],
-      "availableLanguage": ["English", "Spanish"]
-    }
-    </script>
 </head>
 
 <body>
 
-<nav role="navigation">
+<nav>
     <div class="nav-inner">
         <div class="nav-logo">Vitalevi & Baraldi</div>
         <div class="nav-links">
@@ -299,17 +296,17 @@
     </div>
 </nav>
 
-<main role="main">
+<main>
 
 <section class="hero">
     <div class="hero-inner">
         <div class="hero-label">Argentine Immigration Law Firm</div>
-        <h1>Immigration and citizenship law for internationally mobile clients</h1>
+        <h1>Immigration & Citizenship Law for International Clients</h1>
         <p>
-            Vitalevi & Baraldi is a boutique Argentine law firm advising foreign nationals,
-            families and professionals on residency and nationality matters under federal law.
+            Advising foreign nationals, families and professionals on residency,
+            nationality and regulatory matters in Argentina.
         </p>
-        <a href="#contact" class="cta">Request an evaluation</a>
+        <a href="#contact" class="cta">Request a consultation</a>
     </div>
 </section>
 
@@ -320,9 +317,9 @@
         </div>
         <div>
             <p>
-                The firm advises international clients who require clear legal frameworks,
-                documented procedures and predictable interaction with Argentine authorities.
-                Matters are handled with a focus on legal certainty, discretion and continuity.
+                Vitalevi & Baraldi advises international clients who require clear legal
+                frameworks, defined procedures and predictable interaction with Argentine authorities.
+                Matters are handled with discretion, continuity and legal certainty.
             </p>
         </div>
     </div>
@@ -330,11 +327,11 @@
 
 <section id="services" class="services">
     <div class="container">
-        <h2>Legal Services</h2>
+        <h2>Primary Legal Services</h2>
 
         <div class="service-grid">
             <div class="service-box">
-                <h3>Immigration and Residency</h3>
+                <h3>Immigration & Residency</h3>
                 <p>
                     Legal advice and representation for temporary and permanent residence
                     applications, renewals and changes of status.
@@ -350,7 +347,7 @@
             </div>
 
             <div class="service-box">
-                <h3>Professional and Corporate Mobility</h3>
+                <h3>Professional & Corporate Mobility</h3>
                 <p>
                     Advisory services for companies and professionals relocating to Argentina
                     within regulated legal frameworks.
@@ -358,47 +355,23 @@
             </div>
         </div>
 
-        <div class="service-grid">
-    <div class="service-box">
-        <h3>Tax Registration (Monotributo)</h3>
-        <p>
-            Advisory assistance with Argentine tax registration, including Monotributo enrolment,
-            category assessment and ongoing compliance coordination.
-        </p>
-    </div>
-
-    <div class="service-box">
-        <h3>Company Formation</h3>
-        <p>
-            Advisory support for the incorporation of Argentine legal entities,
-            including initial structuring, registrations and coordination with notaries and accountants.
-        </p>
-    </div>
-
-    <div class="service-box">
-        <h3>Bank Account Opening</h3>
-        <p>
-            Procedural guidance and coordination for opening personal and corporate
-            bank accounts with Argentine financial institutions.
-        </p>
-    </div>
-
-    <div class="service-box">
-        <h3>Driver’s Licence (Car and Motorcycle)</h3>
-        <p>
-            Assistance with the recognition, exchange or issuance of Argentine
-            driver’s licences for cars and motorcycles.
-        </p>
-    </div>
-</div>
+        <div class="secondary-services">
+            <h3>Regulatory & Administrative Advisory</h3>
+            <ul>
+                <li><strong>Tax registration (Monotributo)</strong> — advisory assistance with enrolment and compliance coordination</li>
+                <li><strong>Company formation</strong> — procedural support for incorporation and registrations</li>
+                <li><strong>Bank account opening</strong> — coordination with Argentine financial institutions</li>
+                <li><strong>Driver’s licence (car and motorcycle)</strong> — recognition, exchange or issuance procedures</li>
+                <li><strong>CUIL / CDI registration</strong> — required identifiers for employment and administration</li>
+            </ul>
+        </div>
 
         <div class="scope-note">
-    Legal services are provided exclusively by attorneys licensed in the Argentine Republic.
-    Tax, corporate, banking and administrative matters are provided on an advisory basis
-    and, where applicable, in coordination with licensed accountants, notaries and third-party professionals.
-    Such services do not constitute legal representation unless expressly agreed in writing.
-</div>
-
+            Legal services are provided exclusively by attorneys licensed in the Argentine Republic.
+            Tax, corporate, banking and administrative matters are advisory in nature and may involve
+            coordination with licensed accountants, notaries and third-party professionals.
+            Such services do not constitute legal representation unless expressly agreed in writing.
+        </div>
     </div>
 </section>
 
@@ -411,7 +384,7 @@
             <ul>
                 <li>English-language legal communication</li>
                 <li>Defined procedural stages and timelines</li>
-                <li>Written legal guidance throughout the process</li>
+                <li>Written guidance at each stage</li>
                 <li>Structured interaction with authorities</li>
             </ul>
         </div>
@@ -423,8 +396,8 @@
         <div>
             <h2>Request a Consultation</h2>
             <p>
-                Submit an inquiry for an initial legal assessment of your immigration
-                or citizenship matter.
+                Submit an inquiry for an initial assessment of your immigration,
+                citizenship or regulatory matter.
             </p>
         </div>
         <div>
@@ -432,21 +405,20 @@
                 <input type="text" placeholder="Full name" required>
                 <input type="email" placeholder="Email address" required>
                 <input type="text" placeholder="Nationality" required>
+
                 <select required>
-                    <select required>
-    <option value="" disabled selected>Primary objective</option>
-    <option>Immigration or residency application</option>
-    <option>Argentine citizenship proceedings</option>
-    <option>Tax registration (Monotributo)</option>
-    <option>Company formation</option>
-    <option>Bank account opening</option>
-    <option>Driver’s licence (car or motorcycle)</option>
-    <option>General regulatory or administrative advisory</option>
-    <option>Initial legal evaluation</option>
-</select>
+                    <option value="" disabled selected>Primary objective</option>
+                    <option>Immigration or residency application</option>
+                    <option>Argentine citizenship proceedings</option>
+                    <option>Tax or regulatory registration</option>
+                    <option>Company formation or banking</option>
+                    <option>General evaluation</option>
+                </select>
 
                 <textarea rows="4" placeholder="Brief description of your situation"></textarea>
+
                 <button type="submit">Submit inquiry</button>
+
                 <p style="font-size:0.6rem; opacity:0.7; margin-top:14px;">
                     Submission does not create an attorney-client relationship.
                 </p>
@@ -458,7 +430,7 @@
 </main>
 
 <footer>
-    <p>© 2026 Vitalevi & Baraldi — Argentine immigration and citizenship law</p>
+    <p>© 2026 Vitalevi & Baraldi — Argentine Immigration & Citizenship Law</p>
     <p>
         This website contains general information only and does not constitute legal advice.
         No attorney-client relationship is formed by use of this site.
