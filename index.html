@@ -272,33 +272,43 @@
     </div>
 </section>
 
-<section id="contact" class="about">
+<section id="contact" class="about" style="align-items:start;">
     <div>
         <h2>Request an initial consultation.</h2>
-        <p>
-            To assess suitability and scope, all inquiries are reviewed based on the
-            information provided below.
+        <p style="max-width:420px;">
+            To assess suitability and scope, all inquiries are reviewed
+            based on the information provided below.
         </p>
     </div>
 
     <div>
-        <form action="mailto:intake@vitalevibarladi.com" method="post" enctype="text/plain">
+        <form action="mailto:intake@vitalevibarladi.com" method="post" enctype="text/plain"
+              style="display:grid; grid-template-columns:1fr 1fr; gap:28px 32px;">
 
+            <!-- Row 1 -->
             <input type="text" name="full_name" placeholder="Full name" required>
-
             <input type="email" name="email" placeholder="Email address" required>
 
+            <!-- Row 2 -->
             <input type="text" name="nationality" placeholder="Nationality / Nationalities" required>
-
             <input type="text" name="current_country" placeholder="Current country of residence" required>
 
-            <select name="currently_in_argentina" required>
-                <option value="" disabled selected>Are you currently in Argentina?</option>
+            <!-- Row 3 -->
+            <select name="in_argentina" required>
+                <option value="" disabled selected>Currently in Argentina?</option>
                 <option>Yes</option>
                 <option>No</option>
             </select>
 
-            <select name="primary_objective" required>
+            <select name="timeframe" required>
+                <option value="" disabled selected>Intended timeframe</option>
+                <option>Immediate (within 3 months)</option>
+                <option>Medium term (3–12 months)</option>
+                <option>Long term / exploratory</option>
+            </select>
+
+            <!-- Row 4 -->
+            <select name="objective" required style="grid-column:1 / -1;">
                 <option value="" disabled selected>Primary objective</option>
                 <option>Immigration or residency application</option>
                 <option>Argentine citizenship proceedings</option>
@@ -309,34 +319,31 @@
                 <option>General regulatory or administrative advisory</option>
             </select>
 
-            <select name="timeframe" required>
-                <option value="" disabled selected>Intended timeframe</option>
-                <option>Immediate (within 3 months)</option>
-                <option>Medium term (3–12 months)</option>
-                <option>Long term / exploratory</option>
-            </select>
+            <!-- Row 5 -->
+            <textarea name="description" rows="4"
+                placeholder="Brief description of your situation"
+                style="grid-column:1 / -1;"></textarea>
 
-            <select name="prior_applications" required>
-                <option value="" disabled selected>Previous Argentine applications</option>
-                <option>No prior applications</option>
-                <option>Prior residency application</option>
-                <option>Prior citizenship application</option>
-                <option>Prior denial or irregular status</option>
-            </select>
+            <!-- Submit -->
+            <div style="grid-column:1 / -1; margin-top:10px;">
+                <button type="submit"
+                    style="background:var(--gold); border:none; padding:14px 38px;
+                           font-family:'Montserrat', sans-serif; font-size:0.75rem;
+                           letter-spacing:2px; text-transform:uppercase; cursor:pointer;">
+                    Submit request
+                </button>
 
-            <textarea name="description" rows="4" placeholder="Brief description of your situation"></textarea>
-
-            <button type="submit">Submit request</button>
-
-            <p style="font-size:0.6rem; opacity:0.7; margin-top:16px; line-height:1.6;">
-                Inquiries are reviewed personally and subject to availability.
-                Response times vary depending on complexity.
-                Submission does not create an attorney-client relationship.
-            </p>
+                <p style="font-size:0.6rem; opacity:0.6; margin-top:16px; max-width:520px; line-height:1.6;">
+                    Inquiries are reviewed personally and subject to availability.
+                    Response times vary depending on complexity.
+                    Submission does not create an attorney-client relationship.
+                </p>
+            </div>
 
         </form>
     </div>
 </section>
+
 
 <footer>
     <div>
