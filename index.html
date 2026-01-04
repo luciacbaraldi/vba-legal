@@ -141,36 +141,42 @@
         }
 
         /* Services */
-        .service-row.split {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 80px;
+      .service-item {
+    border-bottom: 1px solid #e5e5e5;
     padding: 48px 0;
-    border-bottom: 1px solid #e0e0e0;
 }
 
-.service-question {
+.service-header {
+    cursor: pointer;
+}
+
+.service-label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #9a9a9a;
+    margin-bottom: 12px;
+}
+
+.service-header h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: var(--navy);
-    line-height: 1.4;
+    margin: 0;
 }
 
-.service-answer {
+.service-body {
+    max-width: 720px;
+    margin-top: 20px;
+    display: none;
+}
+
+.service-body p {
     font-size: 0.95rem;
-    color: #555;
     line-height: 1.8;
-}
-
-@media (max-width: 900px) {
-    .service-row.split {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .service-question {
-        font-size: 1.25rem;
-    }
+    color: #555;
 }
 
 
@@ -262,11 +268,67 @@
 }
 
 
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-        }
+        .site-footer {
+    background: #002147;
+    color: rgba(255,255,255,0.75);
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: white;
+}
+
+.footer-location {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+.footer-contact {
+    display: flex;
+    gap: 60px;
+    font-size: 0.75rem;
+}
+
+.footer-contact span {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.65rem;
+    opacity: 0.6;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    .site-footer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .footer-copy {
+        text-align: left;
+    }
+}
+
     </style>
 </head>
 
@@ -309,10 +371,12 @@
 </section>
 <section class="services" id="services">
 
-    <div class="service-row refined">
-        <div class="service-prompt">Residence permits</div>
-        <div class="service-content">
+    <div class="service-item">
+        <div class="service-header">
+            <span class="service-label">Residence permits</span>
             <h3>Do you need a residence permit in Argentina?</h3>
+        </div>
+        <div class="service-body">
             <p>
                 Legal advice and representation for temporary and permanent residency,
                 including new applications, renewals and changes of immigration status.
@@ -320,10 +384,12 @@
         </div>
     </div>
 
-    <div class="service-row refined">
-        <div class="service-prompt">Citizenship</div>
-        <div class="service-content">
+    <div class="service-item">
+        <div class="service-header">
+            <span class="service-label">Citizenship</span>
             <h3>Are you eligible for Argentine citizenship?</h3>
+        </div>
+        <div class="service-body">
             <p>
                 Legal representation for citizenship through residence, including court
                 filings, documentation and procedural guidance.
@@ -331,21 +397,25 @@
         </div>
     </div>
 
-    <div class="service-row refined">
-        <div class="service-prompt">Professional mobility</div>
-        <div class="service-content">
+    <div class="service-item">
+        <div class="service-header">
+            <span class="service-label">Professional mobility</span>
             <h3>Are you relocating to Argentina for work or business?</h3>
+        </div>
+        <div class="service-body">
             <p>
-                Immigration and mobility assistance for professionals, executives
-                and companies operating under Argentine regulations.
+                Immigration and mobility assistance for professionals, executives and
+                companies operating under Argentine regulations.
             </p>
         </div>
     </div>
 
-    <div class="service-row refined">
-        <div class="service-prompt">Administrative matters</div>
-        <div class="service-content">
+    <div class="service-item">
+        <div class="service-header">
+            <span class="service-label">Administrative matters</span>
             <h3>Do you need help with local administrative requirements?</h3>
+        </div>
+        <div class="service-body">
             <p>
                 Assistance with tax registration (Monotributo), company formation,
                 bank account opening, driver’s licences and personal identification
@@ -355,6 +425,7 @@
     </div>
 
 </section>
+
 
 
 
@@ -369,8 +440,12 @@
     </div>
 
     <div>
-        <form action="mailto:intake@vitalevibarladi.com" method="post" enctype="text/plain"
-      class="intake-form">
+        <form action="https://formsubmit.co/contact@lifeinargentina.com" method="POST" class="intake-form">
+<input type="hidden" name="_subject" value="New consultation request">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://lifeinargentina.com/thank-you">
+
 
     <div class="form-row">
         <input type="text" name="full_name" placeholder="Full name" required>
@@ -429,17 +504,37 @@
 </section>
 
 
-<footer>
-    <div>
+<footer class="site-footer">
+    <div class="footer-left">
         <div class="footer-logo">VBA</div>
-        <p style="opacity:0.6; font-size:0.75rem;">Buenos Aires</p>
+        <div class="footer-location">Buenos Aires - Córdoba</div>
     </div>
-    <div style="text-align:right;">
-        <p style="opacity:0.6; font-size:0.7rem;">
+
+    <div class="footer-center">
+        <div class="footer-contact">
+            <div>
+                <span>Email</span><br>
+                <a href="mailto:contact@lifeinargentina.com">
+                    contact@lifeinargentina.com
+                </a>
+            </div>
+
+            <div>
+                <span>WhatsApp</span><br>
+                <a href="https://wa.me/541139222976" target="_blank" rel="noopener">
+                    +54 11 3922 2976
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <div class="footer-copy">
             © 2026 Vitalevi & Baraldi. All rights reserved.
-        </p>
+        </div>
     </div>
 </footer>
+
 
 </body>
 </html>
