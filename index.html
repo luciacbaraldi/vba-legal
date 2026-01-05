@@ -369,12 +369,143 @@
         </p>
     </div>
 </section>
+<style>
+    /* Updated Services Section Styling */
+    .services {
+        padding: 120px 10%;
+        background: var(--white);
+    }
+
+    .services-intro {
+        margin-bottom: 60px;
+    }
+
+    .services-intro h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.4rem;
+        color: var(--navy);
+        margin-bottom: 20px;
+    }
+
+    .service-item {
+        border-bottom: 1px solid #e5e5e5;
+        padding: 30px 0;
+        transition: all 0.3s ease;
+    }
+
+    .service-item:first-of-type {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .service-header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .service-info {
+        flex: 1;
+    }
+
+    .service-label {
+        display: block;
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+    .service-header h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--navy);
+        margin: 0;
+        transition: color 0.3s ease;
+    }
+
+    /* The Plus/Minus Icon */
+    .service-icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+
+    .service-icon::before,
+    .service-icon::after {
+        content: '';
+        position: absolute;
+        background-color: var(--navy);
+        transition: transform 0.4s ease;
+    }
+
+    /* Horizontal line */
+    .service-icon::before {
+        top: 9px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+
+    /* Vertical line */
+    .service-icon::after {
+        left: 9px;
+        top: 0;
+        width: 2px;
+        height: 100%;
+    }
+
+    /* When active, rotate vertical line to make it a minus */
+    .service-item.active .service-icon::after {
+        transform: rotate(90deg);
+    }
+    
+    .service-item.active .service-icon::before {
+        transform: rotate(180deg);
+    }
+
+    .service-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+        max-width: 800px;
+    }
+
+    .service-item.active .service-body {
+        max-height: 1000px; /* Large enough to hold content */
+        transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
+        padding-top: 20px;
+    }
+
+    .service-body p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .service-item:hover h3 {
+        color: var(--gold);
+    }
+</style>
+
 <section class="services" id="services">
+    <div class="services-intro">
+        <span class="service-label">Expertise</span>
+        <h2>Legal Services</h2>
+    </div>
 
     <div class="service-item">
         <div class="service-header">
-            <span class="service-label">Residence permits</span>
-            <h3>Do you need a residence permit in Argentina?</h3>
+            <div class="service-info">
+                <span class="service-label">Residence permits</span>
+                <h3>Do you need a residence permit in Argentina?</h3>
+            </div>
+            <div class="service-icon"></div>
         </div>
         <div class="service-body">
             <p>
@@ -386,8 +517,11 @@
 
     <div class="service-item">
         <div class="service-header">
-            <span class="service-label">Citizenship</span>
-            <h3>Are you eligible for Argentine citizenship?</h3>
+            <div class="service-info">
+                <span class="service-label">Citizenship</span>
+                <h3>Are you eligible for Argentine citizenship?</h3>
+            </div>
+            <div class="service-icon"></div>
         </div>
         <div class="service-body">
             <p>
@@ -399,8 +533,11 @@
 
     <div class="service-item">
         <div class="service-header">
-            <span class="service-label">Professional mobility</span>
-            <h3>Are you relocating to Argentina for work or business?</h3>
+            <div class="service-info">
+                <span class="service-label">Professional mobility</span>
+                <h3>Are you relocating to Argentina for work or business?</h3>
+            </div>
+            <div class="service-icon"></div>
         </div>
         <div class="service-body">
             <p>
@@ -412,8 +549,11 @@
 
     <div class="service-item">
         <div class="service-header">
-            <span class="service-label">Administrative matters</span>
-            <h3>Do you need help with local administrative requirements?</h3>
+            <div class="service-info">
+                <span class="service-label">Administrative matters</span>
+                <h3>Do you need help with local administrative requirements?</h3>
+            </div>
+            <div class="service-icon"></div>
         </div>
         <div class="service-body">
             <p>
@@ -423,8 +563,25 @@
             </p>
         </div>
     </div>
-
 </section>
+
+<script>
+    document.querySelectorAll('.service-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            
+            // Toggle active class
+            item.classList.toggle('active');
+            
+            // Optional: Close other items when one is opened
+            document.querySelectorAll('.service-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
 
 
 
